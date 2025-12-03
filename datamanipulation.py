@@ -5,7 +5,7 @@ import streamlit as st
 
 st.set_page_config(page_title='data visualization for top rated movies',layout='wide')
 st.title('data visualization')
-data=pd.read_csv('C:/Users/elkha/OneDrive/Desktop/DSM_project/CleanData.csv')
+data=pd.read_csv('CleanData.csv')
 
 
 t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13=st.tabs(['barblot for production_companies and it\'s count'
