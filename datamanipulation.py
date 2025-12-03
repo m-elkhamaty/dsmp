@@ -41,11 +41,11 @@ with t1:
     d=e.explode('production_companies')
     ds=d.groupby('production_companies')['title'].count()
     ds=ds.to_frame().reset_index()
-    ds.columns=['production_companies','title']
-    ds=ds.sort_values('title',ascending=False).head(10)
+    ds.columns=['production_companies','count']
+    ds=ds.sort_values('count',ascending=False).head(10)
     
     fig1,ax1=plt.subplots(figsize=(10,5))
-    sns.barplot(data=ds,x='production_companies',y='title',ax=ax1,palette='viridis')
+    sns.barplot(data=ds,x='production_companies',y='count',ax=ax1,palette='viridis')
     ax1.set_xticklabels(ax1.get_xticklabels(), rotation=45, ha='right')
     st.pyplot(fig1)
 # barblot for actors till us about how many they appears at the best 1000 movie
